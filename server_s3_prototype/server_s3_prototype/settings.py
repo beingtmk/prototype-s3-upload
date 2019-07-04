@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
+
 ]
 
 MIDDLEWARE = [
@@ -50,6 +52,12 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'server_s3_prototype.urls'
+
+CSRF_COOKIE_NAME = "csrftoken"
+CORS_ALLOW_CREDENTIALS = True
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:3000',
+)
 
 TEMPLATES = [
     {
